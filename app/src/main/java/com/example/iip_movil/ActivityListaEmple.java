@@ -54,7 +54,10 @@ public class ActivityListaEmple extends AppCompatActivity {
                     for (int i=0; i<EmpleArray.length(); i++)
                     {
                         JSONObject RowEmple = EmpleArray.getJSONObject(i);
-                        Empleado emple = new Empleado(RowEmple.getString("id"),RowEmple.getString("nombre"),RowEmple.getString("apellido"),RowEmple.getString("edad"));
+                        Empleado emple = new Empleado(RowEmple.getString("id")
+                                                        ,RowEmple.getString("nombre")
+                                                        ,RowEmple.getString("apellidos")
+                                                        ,RowEmple.getString("edad"));
 
                         empleadoList.add(emple);
                         arrayEmple.add(emple.getNombre()+' '+ emple.getApellidos());
